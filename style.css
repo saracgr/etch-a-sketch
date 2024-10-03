@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+
+body{
+    box-sizing: border-box;
+    font-family:'Impact';
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(183, 206, 207);
+    margin: 0 auto;
+    height: 100%;
+}
+
+.sketch-pad{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 35px;
+    border-radius: 20px;
+    max-height: 35vw;
+    padding: 40px;
+    margin: 40px 0 50px 0;
+    background-color: rgb(31, 31, 31);
+}
+
+
+header h1{
+    color: rgb(234, 234, 234);
+    background-color: rgb(35, 35, 35);
+    padding: 5px;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button{
+    border: 0;
+    width: 90px;
+    height: 70px;
+    margin: 0 0 40px 0;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: rgb(251, 251, 251);
+    color:rgb(35, 35, 35);
+}
+
+
+.square{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 2px; 
+}
+
+.pixel_container{
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    width: 50vw;
+    height: 100%;
+    background-color: rgb(228, 223, 223);
+}
+
+.rainbow:focus,
+.dark:focus{
+    border: 4px rgb(138, 242, 248) solid;
+    color: rgb(7, 77, 81);
+}
+
+@media screen and (max-width:1025px)  {
+    .buttons button{
+        width: 10vw;
+        height: 7vw;
+        margin: 0 0 30px 0;
+        font-size: 1.7vw;
+    }
+
+    header h1{
+        font-size: 5vw;
+    }
+
+    .sketch-pad{
+        gap: 20px;
+        width: 65vw;
+        padding: 20px;
+        max-height: 45vw;
+    }
+}
